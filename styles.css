@@ -1,6 +1,16 @@
 nav {
     background-color: #333;
     overflow: hidden;
+    width: 100%;
+    position: fixed;
+    height: 100px;
+  
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   nav ul {
@@ -8,21 +18,23 @@ nav {
     margin: 0;
     padding: 0;
   }
-  
-  nav li {
-    float: left;
-  }
-  
-  nav li.right {
-    float: right;
-  }
-  
+
   nav li a {
-    display: block;
+    display: flex;
     color: white;
     text-align: center;
     padding: 14px 16px;
+    font-size: 48px;
+    justify-content: center;
     text-decoration: none;
+  } 
+  
+  .left{
+    display: flex;
+  }
+
+  .right{
+    display: flex;
   }
   
   nav li a:hover {
@@ -66,4 +78,43 @@ nav {
     text-decoration: none;
     cursor: pointer;
   }
+
+  .modal-content{
+    display: flex;
+    justify-content: end;
+  }
+
+  .Banner{
+    display: flex;
+    background-color: aqua;
+    height: 400px;
+
+  }
   
+  .container {
+    display: flex;
+
+  }
+  
+
+  .box1{
+    flex:1;
+    background-color: pink;
+    height: 200px;
+  }
+
+  .box2{
+    background-color: beige;
+    flex:1;
+    height: 200px;
+  }
+  
+  .box3{
+    flex:1;
+    background-color: pink;
+    height: 200px;
+  }
+  
+  .Welcome{
+    background-color: beige;
+  }
