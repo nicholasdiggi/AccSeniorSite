@@ -4,6 +4,8 @@ nav {
     width: 100%;
     position: fixed;
     height: 100px;
+    top: 0;
+    left: 0;
   
   }
 
@@ -39,6 +41,19 @@ nav {
   
   nav li a:hover {
     background-color: #111;
+  }
+
+  /* Dialogue windows */
+
+  .dialogue{
+    margin: 20px 20px;
+    font-size: 24px;
+  }
+
+  .dialogueHeader{
+    margin:20px 20px;
+    font-size: 48px;
+    text-align: center;
   }
   
   /* The Modal (background) */
