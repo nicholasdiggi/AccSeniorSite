@@ -42,6 +42,19 @@ nav {
   nav li a:hover {
     background-color: #111;
   }
+
+  /* Dialogue windows */
+
+  .dialogue{
+    margin: 20px 20px;
+    font-size: 24px;
+  }
+
+  .dialogueHeader{
+    margin:20px 20px;
+    font-size: 48px;
+    text-align: center;
+  }
   
   /* The Modal (background) */
   .modal {
