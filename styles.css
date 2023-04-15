@@ -58,7 +58,7 @@ nav {
   
   /* The Modal (background) */
   .modal {
-    display: flex; /* Hidden by default */
+    display: none; /* Hidden by default */
     justify-content: center;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
