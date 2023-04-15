@@ -125,6 +125,7 @@ nav li a:hover {
 }
 
 
+
 .box1 {
   flex: 1;
   background-color: pink;
@@ -146,3 +147,4 @@ nav li a:hover {
 .Welcome {
   background-color: beige;
 }
+
