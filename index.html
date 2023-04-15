@@ -9,6 +9,7 @@
   </head>
   <body style="margin:0;">
     <nav>
+
       <ul class="nav-list">
         <div class="left">
           <li class="nav-items"><a href="#">Home</a></li>
@@ -25,6 +26,17 @@
 
     <div style="padding-top: 200px;", class="Banner">Banner</div>
     <h1 >Welcome to my website!</h1>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="right"><a href="#" onclick="showLoginForm()">Sign In</a></li>
+      </ul>
+    </nav>
+
+    <h1>Welcome to my website!</h1>
+
     <p>This is just a basic example.</p>
 
     <div class="container">
@@ -37,18 +49,29 @@
     
 
     <div id="login-form" class="modal">
+
       <form class="modal-content" onSubmit="login(event)">
         <div class="container">
           <h2>Sign In</h2>
           <label for="username"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="username" required>
 
-          <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" required>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sign In</h2>
+        <form onsubmit="login(event)">
+          <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+>
 
-          <button type="submit">Sign In</button>
-        </div>
-      </form>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Sign In</button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script src="script.js"></script>
