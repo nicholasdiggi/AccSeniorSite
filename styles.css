@@ -33,7 +33,6 @@ nav li a {
 .left {
   display: flex;
 }
-
 .right {
   display: flex;
 }
@@ -69,16 +68,8 @@ nav li a:hover {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
-<<<<<<< HEAD
   float: right;
-=======
-}
-
-.content-container {
-  padding: 20px;
->>>>>>> refs/remotes/origin/main
-}
-
+} 
 /* The Modal (background) */
 .modal {
   display: none;
