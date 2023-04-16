@@ -1,3 +1,7 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
 nav {
   background-color: #333;
   overflow: hidden;
@@ -33,6 +37,7 @@ nav li a {
 .left {
   display: flex;
 }
+
 .right {
   display: flex;
 }
@@ -49,38 +54,48 @@ nav li a:hover {
   display: none;
 }
 
-#first-step {
-}
-
 /* Dialogue windows */
+
+.content-container {
+  margin: 20px;
+  padding: 100px 0 0 0;
+}
 
 .dialogue {
   margin: 20px 20px;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .dialogueHeader {
   margin: 20px 20px;
-  font-size: 48px;
+  font-size: 56px;
   text-align: center;
 }
 
+.box1 {}
+
 /* Tutorial buttons */
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tutorial-btn {
-  background-color: #4CAF50;
+  background-color: #2502a1;
   border: none;
   color: white;
   padding: 20px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  display: block;
+  font-size: 24px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
-  float: right;
-} 
+}
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -146,11 +161,7 @@ nav li a:hover {
 
 .container {
   display: block;
-
-
 }
-
-
 
 .box1 {
   flex: 1;
@@ -175,7 +186,7 @@ nav li a:hover {
 }
 
 footer {
-  text-align:center;
+  text-align: center;
   padding: 5px;
   background-color: #abbaba;
   color: #000;
@@ -201,4 +212,14 @@ footer {
 
 .styled:active {
   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Auth0 styling */
+.hidden {
+  display: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
 }

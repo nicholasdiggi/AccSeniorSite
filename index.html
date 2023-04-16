@@ -15,13 +15,14 @@
 
     <ul class="nav-list">
       <div class="left">
-        <li class="nav-items"><a href="https://nicholasdiggi.github.io/NetMentor/index">Home</a></li>
-        <li><a href="https://nicholasdiggi.github.io/NetMentor/about">About</a></li>
+        <li class="nav-items hidden"><a href="https://nicholasdiggi.github.io/NetMentor/index">Home</a></li>
+        <li class="hidden"><a href="https://nicholasdiggi.github.io/NetMentor/about">About</a></li>
       </div>
 
       <div class="left">
-        <li class="nav-items"><a href="#">Contact</a></li>
-        <li id="first-step" class="right"><a href="https://nicholasdiggi.github.io/NetMentor/signin">Sign In</a></li>
+        <li class="nav-items hidden"><a href="#">Contact</a></li>
+        <li id="first-step" class="right hidden"><a href="https://nicholasdiggi.github.io/NetMentor/signin">Sign In</a>
+        </li>
       </div>
     </ul>
   </nav>
@@ -29,8 +30,8 @@
 
   <!-- <div style="padding-top: 200px;" , class="Banner">Banner</div> -->
 
-  <div class="content-container">
-    <h1 class="dialogueHeader">Welcome to SiteTrainer</h1>
+  <div id="welcome-message" class="content-container">
+    <h1 class="dialogueHeader">Welcome to NetMentor</h1>
 
     <p class="dialogue">Our website is designed to help people learn how to navigate websites with ease!
 
@@ -46,72 +47,115 @@
       regardless of their age or level of technological expertise. With our website, you'll be able to enjoy all that
       the web has to offer with confidence and ease.
 
-
-      <br><br>To get started, click the left side of your mouse or touchpad while hovering over the button below this text.
+      <br><br>To get started, click the left side of your mouse or touchpad while hovering over the button below this
+      text.
     </p>
     <div class="btn-container">
-      <button class="tutorial-btn" onclick=emphasizeSignIn() type="button">Begin the tutorial!</button>
+      <button class="tutorial-btn" onclick=beginTutorial() type="button">Begin the tutorial!</button>
     </div>
   </div>
 
+  <div id="register-explanation" class="content-container hidden">
+    <h1 class="dialogueHeader">How to Create an Personal Account for a Website</h1>
+    <p class="dialogue">Many websites require you to register a personal account. Online account registration is a
+      process that allows you to create a personal account on a website or
+      application. This account can help you access special features, make purchases, or interact with other users on
+      the website.
+
+      <br><br>To register for an online account, you usually need to provide some basic information like your name,
+      email
+      address, and a password. Some websites may also ask for additional information like your phone number, date of
+      birth, or mailing address.
+
+      <br><br>Once you've provided this information and clicked the "register" button, the website will create your
+      personal
+      account and save your information in their system. From then on, you can log in to your account using your email
+      and password, and start using the features available on the website.
+
+      <br><br>It's important to note that when you create an online account, you're responsible for keeping your login
+      credentials safe and secure. This means choosing a strong password that's difficult to guess, and not sharing it
+      with anyone else. You should also be cautious when giving out personal information online, and only provide
+      information to trusted websites.
+
+      <br><br>To continue with the tutorial, press the button below.
+  </div>
+
+  <!-- <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+  <button id="btn-logout" disabled="true" onclick="logout()">Log out</button> -->
+
+  <div class="container">
+    <div class="box1 hidden">Box 1
+      <h2>The Navigation Bar</h3>
+        <p id="NavBar"> The navigation bar is a menu that helps you move around a website. It usually appears at the top
+          or side of the screen and contains clickable links or buttons that take you to different pages or sections of
+          the website. It helps you find what you're looking for easily without having to search for it on your own.
+        </p>
+        <h3> Home </h3>
+        <p id="Home"> On SiteTrainer, the home button takes you to the front page where you will be able to find
+          information about SiteTrainer. </p>
+        <h3> About </h3>
+        <p id="About"> The about button takes you the page that tells more about the developers of SiteTrainer. </p>
+        <h3> Search Bar </h3>
+        <p id="Search"> The search bar lets you search for specific things within SiteTrainer. When you type in what
+          you're looking for, it shows you a list of results that match your search. </p>
+        <h3> Contact </h3>
+        <p id="Contact"> The contact button takes you to the webpage that allows you to find the contact information of
+          the creators of SiteTrainer.</p>
+    </div>
+    <div class="box2 hidden">Box 2</div>
+    <div class="box3 hidden">Box 3</div>
+    <footer>
+      <p>Copyright © 2023 SiteTrainer. All Rights Reserved.<br>
+        <a href="https://github.com/nicholasdiggi/AccSeniorSite">GitHub</a> <a
+          href="https://github.com/nicholasdiggi/AccSeniorSite">LinkedIn <a
+            href="https://github.com/nicholasdiggi/AccSeniorSite"> Twitter</a></a>
       </p>
-
-    <div class="container">
-      <div class="box1">Box 1
-      <h2>The Navigation Bar</h3> <p id="NavBar"> The navigation bar is a menu that helps you move around a website. It usually appears at the top or side of the screen and contains clickable links or buttons that take you to different pages or sections of the website. It helps you find what you're looking for easily without having to search for it on your own. </p>
-      <h3> Home </h3> 
-      <p id="Home"> On SiteTrainer, the home button takes you to the front page where you will be able to find information about SiteTrainer. </p> 
-      <h3> About </h3> <p id="About"> The about button takes you the page that tells more about the developers of SiteTrainer. </p> 
-      <h3> Search Bar </h3> <p id="Search"> The search bar lets you search for specific things within SiteTrainer. When you type in what you're looking for, it shows you a list of results that match your search. </p>
-      <h3> Contact </h3> <p id="Contact"> The contact button takes you to the webpage that allows you to find the contact information of the creators of SiteTrainer.</p>
-      </div>
-       <div class="box2">Box 2</div>
-      <div class="box3">Box 3</div>
-      <footer>
-        <p>Copyright © 2023 SiteTrainer. All Rights Reserved.<br>
-        <a href="https://github.com/nicholasdiggi/AccSeniorSite">GitHub</a> <a href="https://github.com/nicholasdiggi/AccSeniorSite">LinkedIn <a href="https://github.com/nicholasdiggi/AccSeniorSite"> Twitter</a></a></p>
-      </footer>
-    </div>
-
-    
-  
-       
-    
+    </footer>
   </div>
 
-    <div id="login-form" class="modal">
 
 
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        
-        <form onsubmit="login(event)">
 
-          <h2>Sign In</h2>
 
-          <div class="container">
+  </div>
 
-            <div style="width: 100%;">
-              <label for="username"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="username" required>
-            </div>
-
-            <br>
-
-            <div style="width: 100%;">
-              <label for="password"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="password" required>
-            </div>
-
-            <br>
-
-            <button type="submit">Sign In</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
   <script src="script.js"></script>
+</body>
+<div id="login-form" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <form onsubmit="login(event)">
+
+      <h2>Sign In</h2>
+
+      <div class="container">
+
+        <div style="width: 100%;">
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+        </div>
+
+        <br>
+
+        <div style="width: 100%;">
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+        </div>
+
+        <br>
+
+        <button type="submit">Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
