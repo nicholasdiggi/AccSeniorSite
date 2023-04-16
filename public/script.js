@@ -3,7 +3,6 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
@@ -25,114 +24,68 @@ const firebaseConfig = {
   measurementId: "G-KM83YD1LN0"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth();
 const analytics = getAnalytics(app);
 
-// Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
 
-// User authentication code
-// https://firebase.google.com/docs/auth/web/start
 
-// Sign up new users
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+// The start method will wait until the DOM is loaded.
+// ui.start('#firebaseui-auth-container', uiConfig);
 
-// Sign in existing users
-signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  });
+// Nick: don't touch. you don't know what you're doing
 
-// Set authentication state observer and get user data
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    // ...
-  } else {
-    // User is signed out
-    // ...
-  }
+document.getElementById('reg-btn').addEventListener('click', function(){
+  document.getElementById('register-div').classList.toggle("hidden");
+  document.getElementById('login-div').classList.toggle("hidden");
+
 });
 
-// FirebaseUI Auth
-// https://firebase.google.com/docs/auth/web/firebaseui
+document.getElementById('log-btn').addEventListener('click', function(){
+  document.getElementById('register-div').classList.toggle("hidden");
+  document.getElementById('login-div').classList.toggle("hidden");
+  
+});
 
-// var firebase = require('firebase');
-// var firebaseui = require('firebaseui');
+document.getElementById('login-btn').addEventListener('click', function(){
+  const loginEmail=document.getElementById("login-email").value;
+  const loginPassword=document.getElementById("login-password").value;
 
-// // Initialize the FirebaseUI Widget using Firebase.
-// var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    document.getElementById('result-box').classList.toggle("hidden");
+    document.getElementById('login-div').classList.toggle("hidden");
+    document.getElementById('result').innerHTML="Welcome Back <br>" + loginEmail + " was Login Successfully";
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    document.getElementById('result-box').classList.toggle("hidden")="inline";
+    document.getElementById('login-div').classList.toggle("hidden");
+    document.getElementById('result').innerHTML="Sorry! <br>" + errorMessage;
+  });
 
-// // Email address and password
-// ui.start('#firebaseui-auth-container', {
-//   signInOptions: [
-//     firebase.auth.EmailAuthProvider.PROVIDER_ID
-//   ],
-//   // Other config options...
-// });
+});
 
-// // Require user to enter display name
-// ui.start('#firebaseui-auth-container', {
-//   signInOptions: [
-//     {
-//       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-//       requireDisplayName: false
-//     }
-//   ]
-// });
+document.getElementById('register-btn').addEventListener('click', function(){
+  const registerEmail=document.getElementById("register-email").value;
+  const registerPassword=document.getElementById("register-password").value;
 
-// // Specify the FirebaseUI configuration
-// var uiConfig = {
-//   callbacks: {
-//     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-//       // User successfully signed in.
-//       // Return type determines whether we continue the redirect automatically
-//       // or whether we leave that to developer to handle.
-//       return true;
-//     },
-//     uiShown: function() {
-//       // The widget is rendered.
-//       // Hide the loader.
-//       document.getElementById('loader').style.display = 'none';
-//     }
-//   },
-//   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-//   signInFlow: 'popup',
-//   signInSuccessUrl: '<url-to-redirect-to-on-success>',
-//   signInOptions: [
-//     // Leave the lines as is for the providers you want to offer your users.
-//     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-//     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-//     firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-//     firebase.auth.GithubAuthProvider.PROVIDER_ID,
-//     firebase.auth.EmailAuthProvider.PROVIDER_ID,
-//     firebase.auth.PhoneAuthProvider.PROVIDER_ID
-//   ],
-//   // Terms of service url.
-//   tosUrl: '<your-tos-url>',
-//   // Privacy policy url.
-//   privacyPolicyUrl: '<your-privacy-policy-url>'
-// };
+  createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    document.getElementById('result-box').classList.toggle("hidden");
+    document.getElementById('register-div').classList.toggle("hidden");
+    document.getElementById('result').innerHTML="Welcome Back" + registerEmail + " was Registered Successfully";
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    document.getElementById('result-box').style.display="inline";
+    document.getElementById('register-div').style.display="none";
+    document.getElementById('result').innerHTML="Sorry!" + errorMessage;
+  });
+});
 
-// // Render the FirebaseUI Auth interface
-// // The start method will wait until the DOM is loaded.
-// ui.start('#firebaseui-auth-container', uiConfig);
+
