@@ -1,5 +1,5 @@
-// Import the Auth0 SPA SDK
-// import { createAuth0Client } from '@auth0/auth0-spa-js';
+// Auth0 code taken from auth0 site
+// https://auth0.com/docs/quickstart/spa/vanillajs?framed=1&sq=1#initialize-the-sdk
 
 // Initialize the SDK
 let auth0Client = null;
@@ -29,7 +29,7 @@ window.onload = async () => {
     return;
   }
 
-  // NEW - check for the code and state parameters
+  // check for the code and state parameters
   const query = window.location.search;
   if (query.includes("code=") && query.includes("state=")) {
 
