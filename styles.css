@@ -67,6 +67,12 @@ nav li a:hover {
 
 /* Tutorial buttons */
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tutorial-btn {
   background-color: #4CAF50;
   border: none;
@@ -146,11 +152,7 @@ nav li a:hover {
 
 .container {
   display: block;
-
-
 }
-
-
 
 .box1 {
   flex: 1;
