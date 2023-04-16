@@ -134,7 +134,6 @@ onAuthStateChanged(auth, (user) => {
 //   privacyPolicyUrl: '<your-privacy-policy-url>'
 // };
 
-<<<<<<< HEAD
 // Render the FirebaseUI Auth interface
 // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
@@ -194,8 +193,6 @@ document.getElementById('register-btn').addEventListener('click', function(){
   });
 });
 
-=======
 // // Render the FirebaseUI Auth interface
 // // The start method will wait until the DOM is loaded.
 // ui.start('#firebaseui-auth-container', uiConfig);
->>>>>>> b33ee46a1ba71ab8d26b4e69b8aef8b0acf7c2ba
