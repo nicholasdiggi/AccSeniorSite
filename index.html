@@ -50,6 +50,8 @@
 
       <br><br>To get started, click the left side of your mouse or touchpad while hovering over the button below this
       text.
+      <br><br>To get started, click the left side of your mouse or touchpad while hovering over the button below this
+      text.
     </p>
     <div class="btn-container">
       <button class="tutorial-btn" onclick=emphasizeSignIn() type="button">Begin the tutorial!</button>
@@ -77,7 +79,8 @@
       credentials safe and secure. This means choosing a strong password that's difficult to guess, and not sharing it
       with anyone else. You should also be cautious when giving out personal information online, and only provide
       information to trusted websites.
-    </p>
+<button id="btn-login" disabled="true" onclick="login()">Log in</button>
+  <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
   </div>
 
   <div class="container">
@@ -116,6 +119,9 @@
 
   </div>
 
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+  <script src="script.js"></script>
+</body>
   <div id="login-form" class="modal">
 
 
