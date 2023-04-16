@@ -23,7 +23,7 @@
 
       <div class="left">
         <li class="nav-items hidden"><a href="#">Contact</a></li>
-        <li id="first-step" class="right hidden"><a href="https://nicholasdiggi.github.io/NetMentor/signin">Sign In</a>
+        <li id="sign-in" class="right hidden"><a href="https://nicholasdiggi.github.io/NetMentor/signin">Sign In</a>
         </li>
         <li class="nav-items hidden"><a href="#">Contact</a></li>
         <li id="first-step" class="right hidden"><a href="https://nicholasdiggi.github.io/NetMentor/signin">Sign In</a>
@@ -88,6 +88,18 @@
       information to trusted websites.
 
       <br><br>To continue with the tutorial, press the button below.
+    </p>
+    <div class="btn-container">
+      <button class="tutorial-btn" onclick=secondStep() type="button">Start registration</button>
+    </div>
+  </div>
+
+  <div id="register-prompt" class="content-container hidden">
+    <h1 class="dialogueHeader">Time to make an account!</h1>
+    <p class="dialogue">
+      Observe that a button labeled "Sign In" has appeared in the top right corner of the screen.
+      Drag your cursor over that button and click it to be taken to a separate signup page.
+    </p>
   </div>
 
   <!-- <button id="btn-login" disabled="true" onclick="login()">Log in</button>
@@ -114,7 +126,7 @@
     </div>
     <div class="box2 hidden">Box 2</div>
     <div class="box3 hidden">Box 3</div>
-    <footer>
+    <footer class="footer hide">
       <p>Copyright © 2023 SiteTrainer. All Rights Reserved.<br>
         <a href="https://github.com/nicholasdiggi/AccSeniorSite">GitHub</a> <a
           href="https://github.com/nicholasdiggi/AccSeniorSite">LinkedIn <a
