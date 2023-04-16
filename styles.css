@@ -57,19 +57,27 @@ nav li a:hover {
 
 /* Tutorial buttons */
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tutorial-btn {
+  display: block;
   background-color: #4CAF50;
   border: none;
   color: white;
   padding: 20px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 4px;
-  float: right;
+}
+
+.content-container {
+  padding: 20px 20px;
 }
 
 /* The Modal (background) */
