@@ -86,6 +86,9 @@ const analytics = getAnalytics(app);
 
 // FirebaseUI Auth
 // https://firebase.google.com/docs/auth/web/firebaseui
+
+// Sign up flow
+
 var firebase = require('firebase');
 var firebaseui = require('firebaseui');
 
@@ -110,6 +113,7 @@ ui.start('#firebaseui-auth-container', {
   ]
 });
 
+// Sign in flow
 
 
 // Nick: don't touch. you don't know what you're doing
