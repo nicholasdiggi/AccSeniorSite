@@ -183,24 +183,3 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
-
-// Function to handle form submission
-function login(event) {
-  event.preventDefault();
-  // Get the input values
-  var username = document.getElementsByName("username")[0].value;
-  var password = document.getElementsByName("password")[0].value;
-
-  // Validate the input
-  if (username === "myusername" && password === "mypassword") {
-    alert("Login successful!");
-    modal.style.display = "none";
-  } else {
-    alert("Invalid username or password!");
-  }
-}
-
-// Function to show the login form
-function showLoginForm() {
-  modal.style.display = "block";
-}
