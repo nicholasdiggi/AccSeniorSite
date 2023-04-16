@@ -37,6 +37,7 @@ nav li a {
 .left {
   display: flex;
 }
+
 .right {
   display: flex;
 }
@@ -53,9 +54,6 @@ nav li a:hover {
   display: none;
 }
 
-#first-step {
-}
-
 /* Dialogue windows */
 
 .content-container {
@@ -65,12 +63,12 @@ nav li a:hover {
 
 .dialogue {
   margin: 20px 20px;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .dialogueHeader {
   margin: 20px 20px;
-  font-size: 48px;
+  font-size: 56px;
   text-align: center;
 }
 
@@ -96,7 +94,8 @@ nav li a:hover {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
-} 
+}
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -162,11 +161,7 @@ nav li a:hover {
 
 .container {
   display: block;
-
-
 }
-
-
 
 .box1 {
   flex: 1;
@@ -191,7 +186,7 @@ nav li a:hover {
 }
 
 footer {
-  text-align:center;
+  text-align: center;
   padding: 5px;
   background-color: #abbaba;
   color: #000;
