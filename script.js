@@ -1,3 +1,6 @@
+// Import the Auth0 SPA SDK
+import { createAuth0Client } from '@auth0/auth0-spa-js';
+
 // Get the modal
 var modal = document.getElementById("login-form");
 
