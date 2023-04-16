@@ -118,7 +118,7 @@ function secondStep() {
   // Show sign-in button
   signIn.classList.toggle("hidden");
   signIn.classList.toggle("emphasize");
-  
+
 
   // show the sign-in guide
   registerPrompt.classList.toggle("hidden");
