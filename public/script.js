@@ -84,25 +84,35 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 
-// Get the modal
-var modal = document.getElementById("login-form");
+// FirebaseUI Auth
+// https://firebase.google.com/docs/auth/web/firebaseui
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
 
-// Get the button that opens the modal
-var btn = document.querySelector("nav li.right a");
+// Initialize the FirebaseUI Widget using Firebase.
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Email address and password
+ui.start('#firebaseui-auth-container', {
+  signInOptions: [
+    firebase.auth.EmailAuthProvider.PROVIDER_ID
+  ],
+  // Other config options...
+});
 
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-}
+// Require user to enter display name
+ui.start('#firebaseui-auth-container', {
+  signInOptions: [
+    {
+      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      requireDisplayName: false
+    }
+  ]
+});
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-}
 
+
+// Nick: don't touch. you don't know what you're doing
 function beginTutorial() {
   var firstStep = document.getElementById('first-step');
   var welcomeMessage = document.getElementById('welcome-message');
