@@ -103,7 +103,7 @@ nav li a:hover {
   font-size: 24px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 /* The Modal (background) */
