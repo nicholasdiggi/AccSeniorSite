@@ -41,6 +41,17 @@ nav li a:hover {
   background-color: #111;
 }
 
+.blur {
+  filter: blur(15px);
+}
+
+.hide {
+  display: none;
+}
+
+#first-step {
+}
+
 /* Dialogue windows */
 
 .dialogue {
@@ -49,12 +60,18 @@ nav li a:hover {
 }
 
 .dialogueHeader {
-  margin: 20px 20px;
+  margin: 90px 20px 20px 20px;
   font-size: 48px;
   text-align: center;
 }
 
 /* Tutorial buttons */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .tutorial-btn {
   background-color: #4CAF50;
@@ -135,11 +152,7 @@ nav li a:hover {
 
 .container {
   display: block;
-
-
 }
-
-
 
 .box1 {
   flex: 1;
