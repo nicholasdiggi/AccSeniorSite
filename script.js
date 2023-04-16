@@ -78,30 +78,42 @@ span.onclick = function () {
 }
 
 function beginTutorial() {
-  var firstStep = document.getElementById('first-step');
   var welcomeMessage = document.getElementById('welcome-message');
   var registerExplanation = document.getElementById('register-explanation');
 
-  console.log("Before toggle:");
-  console.log("firstStep: ", firstStep);
-  console.log("welcomeMessage: ", welcomeMessage);
-  console.log("registerExplanation: ", registerExplanation);
-
-  // Show sign-in button
-  firstStep.classList.toggle("hidden");
+  // Force the user to view the top of the webpage
+  window.scrollTo(0, 0);
 
   // Hide the welcome message
   welcomeMessage.classList.toggle("hidden");
 
   // Show the registration explanation
   registerExplanation.classList.toggle("hidden");
-
-  console.log("After toggle:");
-  console.log("firstStep: ", firstStep);
-  console.log("welcomeMessage: ", welcomeMessage);
-  console.log("registerExplanation: ", registerExplanation);
 }
 
+function secondStep() {
+
+  // Force the user to view the top of the webpage
+  window.scrollTo(0, 0);
+
+  var signIn = document.getElementById('sign-in');
+  var registerPrompt = document.getElementById('register-prompt');
+  var registerExplanation = document.getElementById('register-explanation');
+
+  // Force the user to view the top of the webpage
+  window.scrollTo(0, 0);
+
+  // Show sign-in button
+  signIn.classList.toggle("hidden");
+  signIn.classList.toggle("emphasize");
+  
+
+  // show the sign-in guide
+  registerPrompt.classList.toggle("hidden");
+
+  // Hide the registration explanation
+  registerExplanation.classList.toggle("hidden");
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
