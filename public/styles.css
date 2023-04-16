@@ -48,7 +48,7 @@ nav li a {
 
 nav li a:hover {
   background-color: rgb(44, 194, 231);
-  color: orange;
+  color: white;
 }
 
 .blur {
@@ -61,7 +61,7 @@ nav li a:hover {
   font-weight: bold;
 }
 
-.hide {
+.hidden {
   display: none;
 }
 
