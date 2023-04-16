@@ -1,3 +1,7 @@
+body {
+  font-family: 'Arial', Times, serif;
+}
+
 nav {
   background-color: #333;
   overflow: hidden;
@@ -54,6 +58,11 @@ nav li a:hover {
 
 /* Dialogue windows */
 
+.content-container {
+  margin: 20px;
+  padding: 20px 0 0 0;
+}
+
 .dialogue {
   margin: 20px 20px;
   font-size: 24px;
@@ -74,14 +83,14 @@ nav li a:hover {
 }
 
 .tutorial-btn {
-  background-color: #4CAF50;
+  background-color: #2502a1;
   border: none;
   color: white;
   padding: 20px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 24px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
