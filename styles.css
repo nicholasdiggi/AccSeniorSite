@@ -33,7 +33,9 @@ nav li a {
 .left {
   display: flex;
 }
-
+.right {
+  display: flex;
+}
 
 nav li a:hover {
   background-color: #111;
@@ -65,29 +67,20 @@ nav li a:hover {
 
 /* Tutorial buttons */
 
-.btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .tutorial-btn {
-  display: block;
   background-color: #4CAF50;
   border: none;
   color: white;
   padding: 20px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 20px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
-}
-
-.content-container {
-  padding: 20px;
-}
-
+  float: right;
+} 
 /* The Modal (background) */
 .modal {
   display: none;
@@ -112,12 +105,14 @@ nav li a:hover {
 }
 
 /* Modal Content/Box */
-.content {
+.modal-content {
   display: block;
   width: 100%;
   margin-bottom: 10px;
-  padding-top: 100xp;
   background-color: #fefefe;
+  height: 140px;
+  margin: 15% auto;
+  padding: 20px;
   border: 1px solid #888;
   width: 30%;
 }
@@ -137,8 +132,7 @@ nav li a:hover {
   cursor: pointer;
 }
 
-.sign-content {
-  padding-top: 100px;
+.modal-content {
   display: flex;
   justify-content: end;
 }
@@ -152,6 +146,8 @@ nav li a:hover {
 
 .container {
   display: block;
+
+
 }
 
 
@@ -159,7 +155,7 @@ nav li a:hover {
 .box1 {
   flex: 1;
   background-color: pink;
-  height: 200px;
+  height: 500px;
 }
 
 .box2 {
