@@ -21,23 +21,29 @@ span.onclick = function() {
 }
 
 function emphasizeSignIn() {
-  window.scrollTo(0, 0);
-  var elements = document.querySelectorAll('body > *:not(nav) *:not(#first-step)');
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].classList.toggle('blur');
-  }
+  // window.scrollTo(0, 0);
+  // var elements = document.querySelectorAll('body > *:not(nav) *:not(#first-step)');
+  // for (var i = 0; i < elements.length; i++) {
+  //   elements[i].classList.toggle('blur');
+  // }
+
+  // var firstStep = document.getElementById('first-step');
+  // var navElements = document.querySelectorAll('li');
+  // for (var i = 0; i < navElements.length; i++) {
+  //   if (navElements[i] != firstStep)
+  //   {
+  //     navElements[i].classList.toggle('blur');
+  //   }
+  // }
 
   var firstStep = document.getElementById('first-step');
-  var navElements = document.querySelectorAll('li');
-  for (var i = 0; i < navElements.length; i++) {
-    if (navElements[i] != firstStep)
-    {
-      navElements[i].classList.toggle('blur');
-    }
-  }
+  var welcomeMessage = document.getElementsById('welcome-message');
+  var registerExplanation = document.getElementById('register-explanation');
 
-  // Prevent user from scrolling
-  // document.body.style.overflow = 'hidden';
+  // Show sign-in button
+  firstStep.classList.toggle("hidden");
+  welcomeMessage.classList.toogle("hidden");
+  registerExplanation.classList.toggle("hidden");
 }
 
 // When the user clicks anywhere outside of the modal, close it
