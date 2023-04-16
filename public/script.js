@@ -4,7 +4,6 @@
 // Import the functions you need from the SDKs you need
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
@@ -30,126 +29,22 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const analytics = getAnalytics(app);
 
-// Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
 
-// User authentication code
-// https://firebase.google.com/docs/auth/web/start
 
-// Sign up new users
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
-
-// Sign in existing users
-signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  });
-
-// Set authentication state observer and get user data
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    // ...
-  } else {
-    // User is signed out
-    // ...
-  }
-});
-
-// FirebaseUI Auth
-// https://firebase.google.com/docs/auth/web/firebaseui
-
-// var firebase = require('firebase');
-// var firebaseui = require('firebaseui');
-
-// // Initialize the FirebaseUI Widget using Firebase.
-// var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
-// // Email address and password
-// ui.start('#firebaseui-auth-container', {
-//   signInOptions: [
-//     firebase.auth.EmailAuthProvider.PROVIDER_ID
-//   ],
-//   // Other config options...
-// });
-
-// // Require user to enter display name
-// ui.start('#firebaseui-auth-container', {
-//   signInOptions: [
-//     {
-//       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-//       requireDisplayName: false
-//     }
-//   ]
-// });
-
-// // Specify the FirebaseUI configuration
-// var uiConfig = {
-//   callbacks: {
-//     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-//       // User successfully signed in.
-//       // Return type determines whether we continue the redirect automatically
-//       // or whether we leave that to developer to handle.
-//       return true;
-//     },
-//     uiShown: function() {
-//       // The widget is rendered.
-//       // Hide the loader.
-//       document.getElementById('loader').style.display = 'none';
-//     }
-//   },
-//   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-//   signInFlow: 'popup',
-//   signInSuccessUrl: '<url-to-redirect-to-on-success>',
-//   signInOptions: [
-//     // Leave the lines as is for the providers you want to offer your users.
-//     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-//     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-//     firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-//     firebase.auth.GithubAuthProvider.PROVIDER_ID,
-//     firebase.auth.EmailAuthProvider.PROVIDER_ID,
-//     firebase.auth.PhoneAuthProvider.PROVIDER_ID
-//   ],
-//   // Terms of service url.
-//   tosUrl: '<your-tos-url>',
-//   // Privacy policy url.
-//   privacyPolicyUrl: '<your-privacy-policy-url>'
-// };
-
-<<<<<<< HEAD
-// Render the FirebaseUI Auth interface
 // The start method will wait until the DOM is loaded.
-ui.start('#firebaseui-auth-container', uiConfig);
+// ui.start('#firebaseui-auth-container', uiConfig);
 
 // Nick: don't touch. you don't know what you're doing
 
 document.getElementById('reg-btn').addEventListener('click', function(){
-  document.getElementById('register-div').style.display="inline";
-  document.getElementById('login-div').style.display="none";
+  document.getElementById('register-div').classList.toggle("hidden");
+  document.getElementById('login-div').classList.toggle("hidden");
 
 });
 
 document.getElementById('log-btn').addEventListener('click', function(){
-  document.getElementById('register-div').style.display="none";
-  document.getElementById('login-div').style.display="inline";
+  document.getElementById('register-div').classList.toggle("hidden");
+  document.getElementById('login-div').classList.toggle("hidden");
   
 });
 
@@ -160,16 +55,16 @@ document.getElementById('login-btn').addEventListener('click', function(){
   signInWithEmailAndPassword(auth, loginEmail, loginPassword)
   .then((userCredential) => {
     const user = userCredential.user;
-    document.getElementById('result-box').style.display="inline";
-    document.getElementById('login-div').style.display="none";
-    document.getElementById('result').style.display="Welcome Back <br>" + loginEmail + " was Login Successfully";
+    document.getElementById('result-box').classList.toggle("hidden");
+    document.getElementById('login-div').classList.toggle("hidden");
+    document.getElementById('result').innerHTML="Welcome Back <br>" + loginEmail + " was Login Successfully";
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    document.getElementById('result-box').style.display="inline";
-    document.getElementById('login-div').style.display="none";
-    document.getElementById('result').style.display="Sorry! <br>" + errorMessage;
+    document.getElementById('result-box').classList.toggle("hidden")="inline";
+    document.getElementById('login-div').classList.toggle("hidden");
+    document.getElementById('result').innerHTML="Sorry! <br>" + errorMessage;
   });
 
 });
@@ -181,21 +76,17 @@ document.getElementById('register-btn').addEventListener('click', function(){
   createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
   .then((userCredential) => {
     const user = userCredential.user;
-    document.getElementById('result-box').style.display="inline";
-    document.getElementById('register-div').style.display="none";
-    document.getElementById('result').style.display="Welcome Back <br>" + registerEmail + " was Registered Successfully";
+    document.getElementById('result-box').classList.toggle("hidden");
+    document.getElementById('register-div').classList.toggle("hidden");
+    document.getElementById('result').innerHTML="Welcome Back" + registerEmail + " was Registered Successfully";
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     document.getElementById('result-box').style.display="inline";
     document.getElementById('register-div').style.display="none";
-    document.getElementById('result').style.display="Sorry! <br>" + errorMessage;
+    document.getElementById('result').innerHTML="Sorry!" + errorMessage;
   });
 });
 
-=======
-// // Render the FirebaseUI Auth interface
-// // The start method will wait until the DOM is loaded.
-// ui.start('#firebaseui-auth-container', uiConfig);
->>>>>>> b33ee46a1ba71ab8d26b4e69b8aef8b0acf7c2ba
+
