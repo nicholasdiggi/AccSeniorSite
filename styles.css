@@ -34,9 +34,6 @@ nav li a {
   display: flex;
 }
 
-.right {
-  display: flex;
-}
 
 nav li a:hover {
   background-color: #111;
@@ -104,14 +101,12 @@ nav li a:hover {
 }
 
 /* Modal Content/Box */
-.modal-content {
+.content {
   display: block;
   width: 100%;
   margin-bottom: 10px;
+  padding-top: 100xp;
   background-color: #fefefe;
-  height: 140px;
-  margin: 15% auto;
-  padding: 20px;
   border: 1px solid #888;
   width: 30%;
 }
@@ -131,7 +126,8 @@ nav li a:hover {
   cursor: pointer;
 }
 
-.modal-content {
+.sign-content {
+  padding-top: 100px;
   display: flex;
   justify-content: end;
 }
@@ -145,8 +141,6 @@ nav li a:hover {
 
 .container {
   display: block;
-
-
 }
 
 
