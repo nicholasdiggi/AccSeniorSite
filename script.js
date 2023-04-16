@@ -17,6 +17,12 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
+function toggleBlur() {
+  var page = document.querySelector('.page');
+  page.classList.toggle('blur');
+}
+
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
