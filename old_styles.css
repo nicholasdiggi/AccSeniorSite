@@ -107,62 +107,6 @@ nav li a:hover {
   border-radius: 10px;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  justify-content: center;
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  background-color: #fefefe;
-  height: 140px;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 30%;
-}
-
-/* Style the close button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-content {
-  display: flex;
-  justify-content: end;
-}
-
 .Banner {
   display: flex;
   background-color: aqua;
@@ -210,11 +154,15 @@ footer {
   font-size: 1rem;
   text-align: center;
   color: #fff;
+  margin-bottom:10px;
+  
   text-shadow: 1px 1px 1px #000;
   border-radius: 10px;
   background-color: rgba(220, 0, 0, 1);
   background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
   box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  
+  
 }
 
 .styled:hover {
@@ -245,3 +193,38 @@ label {
   margin-bottom: 10px;
   display: block;
 }
+
+.grid-container-element { 
+  display: grid; 
+  margin: auto; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 100px; 
+  /*border: 1px solid black; */
+  width: 90%; 
+  margin-bottom: 75px;
+  
+} 
+.grid-child-element { 
+  margin: 10px; 
+ /* border: 3px solid rgb(0, 0, 0);  */
+  background-color: #f2f2f2;
+  border-radius: 70px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.info {
+  text-align: center;
+  margin-left:5%;
+  margin-right:5%;
+}
+
+#title {
+  text-align: center;
+}
+
