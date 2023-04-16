@@ -87,5 +87,3 @@ var uiConfig = {
 // Render the FirebaseUI Auth interface
 // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
-
-// Nick: don't touch. you don't know what you're doing
