@@ -37,12 +37,16 @@ function emphasizeSignIn() {
   // }
 
   var firstStep = document.getElementById('first-step');
-  var welcomeMessage = document.getElementsById('welcome-message');
+  var welcomeMessage = document.getElementById('welcome-message');
   var registerExplanation = document.getElementById('register-explanation');
 
   // Show sign-in button
   firstStep.classList.toggle("hidden");
-  welcomeMessage.classList.toogle("hidden");
+
+  // Hide the welcome message
+  welcomeMessage.classList.toggle("hidden");
+
+  // Show the registration explanation
   registerExplanation.classList.toggle("hidden");
 }
 
