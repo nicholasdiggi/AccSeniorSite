@@ -1,8 +1,10 @@
 body {
   font-family: 'Arial', sans-serif;
+  margin: 0;
 }
 
 nav {
+  margin: 0;
   background-color: #333;
   overflow: hidden;
   width: 100%;
@@ -10,6 +12,7 @@ nav {
   height: 100px;
   top: 0;
   left: 0;
+  border-radius: 10px;
 }
 
 .nav-list {
@@ -22,6 +25,7 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  border-radius: 10px;
 }
 
 nav li a {
@@ -43,11 +47,18 @@ nav li a {
 }
 
 nav li a:hover {
-  background-color: #111;
+  background-color: rgb(44, 194, 231);
+  color: orange;
 }
 
 .blur {
   filter: blur(15px);
+}
+
+.emphasize {
+  background-color: orange;
+  color: rgb(44, 194, 231);
+  font-weight: bold;
 }
 
 .hide {
@@ -58,7 +69,7 @@ nav li a:hover {
 
 .content-container {
   margin: 20px;
-  padding: 100px 0 0 0;
+  padding: 100px 0;
 }
 
 .dialogue {
@@ -83,7 +94,7 @@ nav li a:hover {
 }
 
 .tutorial-btn {
-  background-color: #2502a1;
+  background-color: rgb(44, 194, 231);
   border: none;
   color: white;
   padding: 20px 20px 20px 20px;
@@ -93,7 +104,7 @@ nav li a:hover {
   font-size: 24px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 /* The Modal (background) */
@@ -224,9 +235,21 @@ footer {
   display: none;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
 label {
   margin-bottom: 10px;
   display: block;
+<<<<<<< HEAD
 }
 
 .grid-container-element { 
@@ -263,3 +286,6 @@ label {
   text-align: center;
 }
 
+=======
+}
+>>>>>>> 9720839f5d4b4755a6fd125f676e313cf563331b
