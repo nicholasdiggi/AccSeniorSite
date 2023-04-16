@@ -18,7 +18,17 @@ const configureClient = async () => {
 
 window.onload = async () => {
   await configureClient();
+
+  // update the UI state
+  updateUI();
 }
+
+const updateUI = async () => {
+  const isAuthenticated = await auth0Client.isAuthenticated();
+
+  document.getElementById("btn-logout").disabled = !isAuthenticated;
+  document.getElementById("btn-login").disabled = isAuthenticated;
+};
 
 // Get the modal
 var modal = document.getElementById("login-form");
