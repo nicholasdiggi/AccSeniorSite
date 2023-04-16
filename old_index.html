@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website Tutorial" />
+  <title>SiteTrainer</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="margin:0;">
+  <nav>
+
+    <ul class="nav-list">
+      <div class="left">
+        <li class="nav-items hidden"><a href="https://nicholasdiggi.github.io/NetMentor/index">Home</a></li>
+        <li class="hidden"><a href="https://nicholasdiggi.github.io/NetMentor/about">About</a></li>
+        <li class="nav-items hidden"><a href="https://nicholasdiggi.github.io/NetMentor/index">Home</a></li>
+        <li class="hidden"><a href="https://nicholasdiggi.github.io/NetMentor/about">About</a></li>
+      </div>
+
+      <div class="left">
+        <li class="nav-items hidden"><a href="#">Contact</a></li>
+        <li id="sign-in" class="right hidden"><a href="https://nicholasdiggi.github.io/NetMentor/signin">Sign In</a>
+        </li>
+        <li class="nav-items hidden"><a href="#">Contact</a></li>
+        <li id="first-step" class="right hidden"><a href="https://nicholasdiggi.github.io/NetMentor/signin">Sign In</a>
+        </li>
+      </div>
+    </ul>
+  </nav>
+
+
+  <!-- <div style="padding-top: 200px;" , class="Banner">Banner</div> -->
+
+  <div id="welcome-message" class="content-container">
+    <h1 class="dialogueHeader">Welcome to NetMentor</h1>
+  <div id="welcome-message" class="content-container">
+    <h1 class="dialogueHeader">Welcome to NetMentor</h1>
+
+    <p class="dialogue">Our website is designed to help people learn how to navigate websites with ease!
+
+      We understand that using technology can be overwhelming, especially for those who didn't grow up with it. That's
+      why we created this website with you in mind. Our goal is to provide you with the knowledge and skills you need to
+      confidently and comfortably navigate the web.
+
+      <br><br>Our website is full of helpful tips and step-by-step tutorials that help you learn how to navigate a
+      generically structured website. We've also included simple explanations of technical terms and concepts to help
+      demystify the online world.
+
+      We believe that everyone should have access to the wealth of information and resources that the internet provides,
+      regardless of their age or level of technological expertise. With our website, you'll be able to enjoy all that
+      the web has to offer with confidence and ease.
+
+      <br><br>To get started, click the left side of your mouse or touchpad while hovering over the button below this
+      text.
+      <br><br>To get started, click the left side of your mouse or touchpad while hovering over the button below this
+      text.
+    </p>
+    <div class="btn-container">
+      <button class="tutorial-btn" onclick=beginTutorial() type="button">Begin the tutorial!</button>
+      <button class="tutorial-btn" onclick=beginTutorial() type="button">Begin the tutorial!</button>
+    </div>
+  </div>
+
+  <div id="register-explanation" class="content-container hidden">
+    <h1 class="dialogueHeader">How to Create an Personal Account for a Website</h1>
+    <p class="dialogue">Many websites require you to register a personal account. Online account registration is a
+      process that allows you to create a personal account on a website or
+      application. This account can help you access special features, make purchases, or interact with other users on
+      the website.
+
+      <br><br>To register for an online account, you usually need to provide some basic information like your name,
+      email
+      address, and a password. Some websites may also ask for additional information like your phone number, date of
+      birth, or mailing address.
+
+      <br><br>Once you've provided this information and clicked the "register" button, the website will create your
+      personal
+      account and save your information in their system. From then on, you can log in to your account using your email
+      and password, and start using the features available on the website.
+
+      <br><br>It's important to note that when you create an online account, you're responsible for keeping your login
+      credentials safe and secure. This means choosing a strong password that's difficult to guess, and not sharing it
+      with anyone else. You should also be cautious when giving out personal information online, and only provide
+      information to trusted websites.
+
+      <br><br>To continue with the tutorial, press the button below.
+    </p>
+    <div class="btn-container">
+      <button class="tutorial-btn" onclick=secondStep() type="button">Start registration</button>
+    </div>
+  </div>
+
+  <div id="register-prompt" class="content-container hidden">
+    <h1 class="dialogueHeader">Time to make an account!</h1>
+    <p class="dialogue">
+      Observe that a button labeled "Sign In" has appeared in the top right corner of the screen.
+      Drag your cursor over that button and click it to be taken to a separate signup page.
+    </p>
+  </div>
+
+  <div id="nav-explanation" class="content-container">
+    <h1 class="dialogueHeader">Let's learn about <em>navigation bars</em>...</h1>
+    <p class="dialogue">
+      A navigation bar, also known as a "nav bar," is a section of a website or application that helps users navigate to
+      different pages or sections within the site or app. A simple nav bar typically consists of several components that
+      work together to provide an intuitive and easy-to-use navigation experience. Here is a breakdown of each of these
+      components:</p>
+
+    <ol class="dialogue">
+      <li>Logo: <br>This is the icon or graphic that represents the brand or website. The logo is usually placed in the
+        top
+        left
+        corner of the nav bar and serves as a visual anchor point for users.<br><br></li>
+      <li>Menu Items: <br>These are the clickable links that lead to different sections or pages of the website. Menu
+        items are typically arranged horizontally across the nav bar and can be styled in a variety of ways to make them
+        stand out or blend in with the overall design of the site.<br><br></li>
+      <li>Dropdown Menus: <br>Sometimes, there are too many menu items to fit in a single row of the nav bar. In this
+        case, dropdown menus can be used to group related items together and create a more organized navigation
+        structure.
+        When a user hovers over a menu item with a dropdown, a list of additional options appears below it.<br><br>
+      </li>
+      <li>Search Bar: <br>If the website has a large amount of content or products, a search bar can be added to the nav
+        bar to allow users to quickly find what they're looking for. The search bar typically appears to the right of
+        the menu items and can be accessed by clicking on a magnifying glass icon.<br><br>
+      </li>
+      <li>Hamburger Menu:<br> On mobile devices, the nav bar may be too small to display all of the menu items. In this
+        case, a hamburger menu icon can be used to reveal a hidden menu that slides out from the side of the screen when
+        clicked.
+        The hamburger menu icon consists of three horizontal lines stacked on top of each other, resembling a
+        hamburger.<br>
+      </li>
+    </ol>
+
+    <p class="dialogue">Overall, a simple nav bar is an essential component of any website or application, as it
+      provides users with a
+      clear and intuitive way to navigate the site's content or functionality. By using the various components listed
+      above, web designers and developers can create a nav bar that is both functional and visually appealing, helping
+      to improve the user experience and drive engagement.<br><br>
+
+      Now, let's explore the nav bar!
+    </p>
+    <div class="btn-container">
+      <button class="tutorial-btn" onclick=secondStep() type="button">Explore</button>
+    </div>
+  </div>
+
+  <div id="nav-guide-home" class="content-container">
+    <h1 class="dialogueHeader">The home button</h1>
+    <p class="dialogue">
+      Most nav bars have a home button because it provides a clear and easy way for users to return to the main page or
+      homepage of a website. The home button is usually the first or leftmost button on the nav bar, and it typically
+      features the word "Home" or a small house icon.<br><br>
+
+      Having a home button is important because it allows users to easily navigate back to the main page of a website
+      from anywhere on the site. This is especially useful if the site has multiple pages or sections that users may
+      explore. It also helps users who may have gotten lost or confused while browsing the site.<br><br>
+
+      Additionally, having a home button is a common convention in web design, and users have come to expect it. It
+      helps to provide a sense of familiarity and consistency across different websites, making it easier for users to
+      understand and navigate new sites.<br><br>
+
+      In summary, most nav bars have a home button because it provides an easy way for users to return to the main page
+      of a website and helps to provide a sense of familiarity and consistency in web design.
+    </p>
+  </div>
+
+  <!-- <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+  <button id="btn-logout" disabled="true" onclick="logout()">Log out</button> -->
+
+  <div class="container">
+    <div class="box1 hidden">Box 1
+      <h2>The Navigation Bar</h3>
+        <p id="NavBar"> The navigation bar is a menu that helps you move around a website. It usually appears at the top
+          or side of the screen and contains clickable links or buttons that take you to different pages or sections of
+          the website. It helps you find what you're looking for easily without having to search for it on your own.
+        </p>
+        <h3> Home </h3>
+        <p id="Home"> On SiteTrainer, the home button takes you to the front page where you will be able to find
+          information about SiteTrainer. </p>
+        <h3> About </h3>
+        <p id="About"> The about button takes you the page that tells more about the developers of SiteTrainer. </p>
+        <h3> Search Bar </h3>
+        <p id="Search"> The search bar lets you search for specific things within SiteTrainer. When you type in what
+          you're looking for, it shows you a list of results that match your search. </p>
+        <h3> Contact </h3>
+        <p id="Contact"> The contact button takes you to the webpage that allows you to find the contact information of
+          the creators of SiteTrainer.</p>
+    </div>
+    <div class="box2 hidden">Box 2</div>
+    <div class="box3 hidden">Box 3</div>
+    <footer class="footer hide">
+      <p>Copyright © 2023 SiteTrainer. All Rights Reserved.<br>
+        <a href="https://github.com/nicholasdiggi/AccSeniorSite">GitHub</a> <a
+          href="https://github.com/nicholasdiggi/AccSeniorSite">LinkedIn <a
+            href="https://github.com/nicholasdiggi/AccSeniorSite"> Twitter</a></a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<div id="login-form" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <form onsubmit="login(event)">
+
+      <h2>Sign In</h2>
+
+      <div class="container">
+
+        <div style="width: 100%;">
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+        </div>
+
+        <br>
+
+        <div style="width: 100%;">
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+        </div>
+
+        <br>
+
+        <button type="submit">Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
