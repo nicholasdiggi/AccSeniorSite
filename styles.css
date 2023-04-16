@@ -55,6 +55,23 @@ nav li a:hover {
   text-align: center;
 }
 
+/* Tutorial buttons */
+
+.tutorial-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  float: right;
+}
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -147,4 +164,3 @@ nav li a:hover {
 .Welcome {
   background-color: beige;
 }
-
