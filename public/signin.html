@@ -7,30 +7,56 @@
     <title>NetMentor</title>
     
     <link rel="stylesheet" href="styles.css">
+<<<<<<< HEAD
+    
+=======
     <script defer type="module" src="script.js"></script>
     <script defer src="work.js"></script>
+>>>>>>> b33ee46a1ba71ab8d26b4e69b8aef8b0acf7c2ba
   </head>
 
   <body style="margin:0;">
     <nav style="margin:0;">
       <ul class="nav-list">
         <div class="left">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
         </div>
         
         <div class="left">
           <li class="nav-items"><a href="#">Contact</a></li>
-          <li><a href="/signin.html">Sign In</a></li>
+          <li><a href="signin.html">Sign In</a></li>
         </div>
       </ul>
     </nav>
     
     <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
-    <h1>Welcome to My Awesome App</h1>
+    
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
 
+    <div class="center-box" id="login-div">
+      <h2>Login</h2>
+      <input type="email" id="login-email" class="text-field" name="login-email" placeholder="Email" required/> <br>
+      <input type="password" id="login-password" class="text-field" name="login-password" placeholder="Password" required/> <br>
+      <button id="login-btn" class="btn-style">Login</button><br>
+      <button id="reg-btn" class="an-btn">Don't Have an Account? Register</button>
+    </div>
+
+    <div class="center-box" id="register-div">
+      <h2>Register</h2>
+      <input type="email" id="register-email" class="text-field" name="register-email" placeholder="Email" required/> <br>
+      <input type="password" id="register-password" class="text-field" name="register-password" placeholder="Password" required/> <br>
+      <button id="register-btn" class="btn-style">Register</button><br>
+      <button id="log-btn" class="an-btn">Have an Account? Login</button>
+    </div>
+
+    <div id="result-box">
+      <h3 id="result"></h3>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="work.js"></script>
   </body>
 </html>
